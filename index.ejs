@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link 
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+
+        <title>Story Blog</title>
+
+    </head>
+    <body>
+        <h1>Welcome to our stories</h1>
+
+        <p>Here you can post stories that have happened to you so other may expierence learn and or learn upon of. Share intresting things you've done that you may not want others to try or you do, the freedom is yours!</p>
+
+        <a href="/create">Create a post</a>
+
+        <br><br>
+
+        <div class="card mb-4">
+
+        <% posts.forEach(post => { %>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title"><%= post.title %></h2>
+
+                    <p class="card-text"><%= post.body %></p>
+
+                    <p class="text-muted">
+                        By <%= post.creator_name %>
+                    </p>
+
+                    <small class="text-muted">
+                        <%= new Date(post.date_created).toLocaleString() %>
+                    </small>
+                </div>
+            </div>
+        <% }) %>
+
+
+
+    </body>
+
+    </html>

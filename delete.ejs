@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Delete Story</title>
+    </head>
+        <link 
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+         rel="stylesheet">
+    <body>
+            <h1>Delete Story</h1>
+
+    <p>Are you sure you want to delete this post?</p>
+
+    <h2><%= post.title %></h2>
+
+    <p>By <%= post.creator %></p>
+
+    <p><%= post.story %></p>
+
+    <form action="/posts/<%= post.id %>/delete" method="POST">
+
+        <button type="submit">Yes, Delete Post</button>
+
+    </form>
+
+    <br><br>
+
+    <a href="/">Home</a>
+
+    </body>
+
+
+
+
+</html>
+
+
+

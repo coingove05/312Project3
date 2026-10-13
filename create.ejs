@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link 
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+        <title>Create Story</title>
+    </head>
+    <body>
+        <h1> contribute a story</h1>
+        <form action="/posts" method="POST">
+            <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        class="form-control"
+                        maxlength="255"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="body" class="form-label">Body</label>
+                    <textarea
+                        id="body"
+                        name="body"
+                        class="form-control"
+                        rows="6"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="creator_user_id" class="form-label">
+                        Creator User ID
+                    </label>
+                    <select
+                        id="creator_user_id"
+                        name="creator_user_id"
+                        class="form-select"
+                        required
+                    >
+                        <option value="colin51">colin51</option>
+                        <option value="tim42">tim42</option>
+                        <option value="luke86">luke86</option>
+                        <option value="dom57">dom57</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Publish Post
+                </button>
+        </form>
+
+        <br><br>
+
+        <a href="/">Home</a>
+
+    </body>
+
+
+
+
+</html>
+
+
+

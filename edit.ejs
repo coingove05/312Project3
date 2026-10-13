@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Edit Stories</title>
+    </head>
+        <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+    <body>
+        <h1>Edit Story</h1>
+
+        <form action="/posts/<%= post.id %>/edit" method="POST">
+            <label>Title:</label>
+            <br>
+            <input
+                type="text"
+                name="title"
+                value="<%= post.title %>"
+                required
+            >
+
+            <br><br>
+            <label>Creator:</label>
+
+            <input
+                type="text"
+                name="creator"
+                value="<%= post.creator %>"
+                required
+            >
+
+            <br><br>
+            <label>Story</label>
+
+            <br>
+
+            <textarea
+                name="story"
+                rows="10"
+                required
+            ><%= post.story %></textarea>
+
+            <br><br>
+
+            <button type="submit">Save Changes</button>
+
+        </form>
+
+        <br><br>
+
+        <a href="/">Home</a>
+
+    </body>
+
+
+
+
+</html>
+
+
+
